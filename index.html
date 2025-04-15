@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Checker v10.9</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="clock"></div>
+
+  <h2>Team X & Telegram Checker</h2>
+  <div class="version">Version 10.9</div>
+
+  <!-- Music Player URL Input -->
+  <label for="musicUrl">Enter Music URL:</label>
+  <input type="text" id="musicUrl" placeholder="Paste your music URL here" />
+  <button onclick="playMusic()">Play Music</button>
+
+  <!-- Music Controls -->
+  <audio id="musicPlayer" controls autoplay loop>
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Inputs -->
+  <label>Default Country Code (e.g. +91):</label>
+  <input type="text" id="countryCode" value="+" />
+
+  <textarea id="numbers" placeholder="Paste phone numbers, one per line"></textarea>
+
+  <div id="progressBar"><div id="progress"></div></div>
+
+  <!-- Buttons -->
+  <button onclick="checkNumbers()">Check WhatsApp</button>
+  <button onclick="checkTelegram()">Check Telegram</button>
+  <button onclick="copyActive()">Copy WhatsApp Active</button>
+  <button onclick="exportActive()">Export WhatsApp Active</button>
+  <button onclick="clearAll()">Clear All</button>
+
+  <input type="text" id="searchBox" placeholder="Search results..." onkeyup="filterResults()" />
+
+  <div id="results"></div>
+
+  <div class="box" id="sendBar" style="display: none;">
+    <h3>Send via WhatsApp</h3>
+    <div id="sendLinks"></div>
+  </div>
+
+  <div class="box" id="telegramStatsBox" style="display: none;">
+    <h3>Telegram Stats</h3>
+    <p>Total: <span id="telegramTotal">0</span> |
+       Active: <span id="telegramActive">0</span> |
+       Inactive: <span id="telegramInactive">0</span> |
+       Invalid: <span id="telegramInvalid">0</span></p>
+    <button onclick="copyTelegramActive()">Copy Telegram Active</button>
+    <button onclick="exportTelegramActive()">Export Telegram Active</button>
+  </div>
+
+  <div class="box" id="joinNowBox" style="display: none;">
+    <p><strong>Join Now 🟢🟢🔴</strong> 
+    <a href="https://t.me/t1emx" target="_blank">https://t.me/t1emx</a></p>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
